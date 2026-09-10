@@ -21,29 +21,29 @@ export const categories: Category[] = [
     title: "Computers, Code & Operating Systems",
     tagline: "The bricks themselves",
     blurb:
-      "Before you snap Lego together, you need to know what a brick actually is. This layer is the raw materials: what a computer is doing when it \"runs\" your code, and why the operating system underneath it changes your day-to-day experience.",
+      "What a computer is doing when it “runs” your code, and why the OS underneath changes your day.",
     terms: [
       {
         term: "Computer",
         definition:
-          "A machine that follows instructions, step by step, extremely fast. Everything else in this glossary is just increasingly organised ways of giving it instructions.",
+          "A machine that follows instructions, extremely fast. Everything else is just organised ways of giving it those instructions.",
       },
       {
         term: "Code",
         definition:
-          "The instructions themselves, written in a language a computer (eventually) understands.",
+          "The instructions themselves, written in a language a computer eventually understands.",
       },
       {
         term: "Operating system (OS)",
         definition:
-          "The base software layer — Windows, macOS, or Linux — that manages the hardware and decides how programs get to run.",
-        note: "The people who build most AI coding tools use Mac or Linux day to day, so that's where the tooling is best supported by default. That doesn't lock out Windows — it just means Windows has one extra step.",
+          "The base layer — Windows, macOS, or Linux — that manages hardware and how programs run.",
+        note: "Most AI coding tools are built on Mac/Linux. Windows works — often via one extra step (WSL).",
       },
       {
         term: "WSL (Windows Subsystem for Linux)",
         definition:
-          "A real Linux environment that runs inside Windows, side by side with your normal desktop.",
-        note: "If you're on Windows, run your vibe-coding tools inside WSL. It puts you on the same footing as the Mac/Linux setup the tooling was actually built for.",
+          "A real Linux environment that runs inside Windows, alongside your normal desktop.",
+        note: "On Windows, run vibe-coding tools inside WSL so you match the Mac/Linux setup they were built for.",
       },
     ],
   },
@@ -53,33 +53,32 @@ export const categories: Category[] = [
     title: "The Web, Browsers & the Front End",
     tagline: "Aden's Mowing, page one",
     blurb:
-      "Say you're starting a mowing business and you build yourself a single web page. On the internet that's one link, going nowhere else. On your file system, that's one file. Here's what's actually inside it.",
+      "One mowing-business web page: one link on the internet, one file on disk — here's what's inside.",
     terms: [
       {
         term: "Webpage",
         definition:
-          "A document your browser can request and display. A \"single page\" site is one link, and on disk, one file.",
+          "A document your browser can request and display. A single-page site is one link, and on disk, one file.",
       },
       {
         term: "Browser",
         definition:
-          "A native app on your desktop — Chrome, Firefox, Edge — whose whole job is requesting and rendering web pages. Under the hood it's exchanging HTML with a server.",
+          "A desktop app (Chrome, Firefox, Edge) that requests and renders web pages by exchanging HTML with a server.",
       },
       {
         term: "HTML",
         definition:
-          "Outlines what the content actually is — the headings, text, images, and structure of the page.",
+          "What the content is — headings, text, images, and structure.",
       },
       {
         term: "CSS",
         definition:
-          "The styling layer, packaged alongside HTML. Turns plain content into something that looks like your brand.",
+          "The styling layer. Turns plain content into something that looks like your brand.",
       },
       {
         term: "JavaScript (in the browser)",
         definition:
-          "Makes the page interactive — clicks, popups, loaders, anything that responds without reloading.",
-        note: "This runs on the visitor's browser, not your server. It can make a page feel alive, but it can't by itself remember anything between visitors — that's the back end's job (see Layer 5).",
+          "Makes the page interactive — clicks, popups, loaders — without a full reload. Runs in the visitor's browser, not your server; it can't remember anything between visitors on its own (see Layer 5).",
       },
     ],
   },
@@ -88,18 +87,17 @@ export const categories: Category[] = [
     layer: 3,
     title: "Domains, DNS, IPs & Ports",
     tagline: "Getting the world to your file",
-    blurb:
-      "You've got a file that says \"Aden's Mowing\" on it. Now — how does anyone else on Earth actually get to it?",
+    blurb: "You've got the file. How does anyone else on Earth actually reach it?",
     terms: [
       {
         term: "Domain name",
         definition:
-          "A human-readable name — say, adensmowing.com — that you buy from a registrar (GoDaddy and similar).",
+          "A human-readable name — adensmowing.com — bought from a registrar.",
       },
       {
         term: "DNS",
         definition:
-          "The system that translates a domain name into the IP address of the computer that's actually going to answer.",
+          "Translates a domain name into the IP address of the computer that will answer.",
       },
       {
         term: "IP address",
@@ -108,14 +106,14 @@ export const categories: Category[] = [
       {
         term: "Port",
         definition:
-          "A numbered lane on that computer, dedicated to one kind of traffic, so everything doesn't collide on the same channel.",
-        note: "Web traffic (HTTP) sits on port 80, secure web traffic (HTTPS) on port 443, and remote terminal access (SSH) on port 22. There are thousands of ports — these three cover almost everything you'll touch early on.",
+          "A numbered lane on that computer for one kind of traffic, so everything doesn't collide.",
+        note: "HTTP 80, HTTPS 443, SSH 22 — these three cover almost everything early on.",
       },
       {
         term: "Web server",
         definition:
-          "Software listening on that open port, whose job is to hand back the right file (or response) when a request for your domain arrives.",
-        note: "Hosts like Vercel or Digital Ocean run this layer for you. Knowing what's happening underneath just means you use the right words when you're vibe coding, and can tell when something's actually broken at this layer versus somewhere else.",
+          "Software listening on that port that returns the right file or response when your domain is requested.",
+        note: "Hosts like Vercel run this for you. Knowing the layer helps you name what broke.",
       },
     ],
   },
@@ -125,21 +123,21 @@ export const categories: Category[] = [
     title: "Data & Database Design",
     tagline: "Model the data before you model anything else",
     blurb:
-      "Now you want visitors to leave their mobile number in a queue you can see. That needs somewhere to live. Design how the data is shaped first — it tells you what language and keywords you actually need once you start vibe coding.",
+      "Visitors leave a mobile number in a queue you can see — that needs a home. Shape the data first; it tells you what to vibe code.",
     terms: [
       {
         term: "Database",
         definition:
-          "Think of it like a spreadsheet: rows and columns, where every column has a type (text, number, date, and so on).",
+          "Like a spreadsheet: rows and columns, each column typed (text, number, date…).",
       },
       {
         term: "Table",
         definition:
-          "One data type/entity gets one table — like a tab in that spreadsheet. A mowing business might have a businesses table and a locations table.",
+          "One entity per table — a tab in that spreadsheet. A mowing business might have businesses and locations.",
       },
       {
         term: "Column / field",
-        definition: "A single typed value on a row — a name, an email, a date.",
+        definition: "A single typed value on a row — name, email, date.",
       },
       {
         term: "Relationship — \"has many\"",
@@ -149,13 +147,13 @@ export const categories: Category[] = [
       {
         term: "Relationship — \"belongs to\" / one-to-one",
         definition:
-          "The other direction of the same link — each location belongs to exactly one business.",
+          "The other direction — each location belongs to exactly one business.",
       },
       {
         term: "Schema",
         definition:
-          "The overall shape of your data — every table, every column, every relationship — sketched out before you write application code.",
-        note: "Do this first and you don't end up with 80 accidental tables. Vibe code the schema, then vibe code on top of it.",
+          "The overall shape — every table, column, and relationship — sketched before application code.",
+        note: "Do this first or you get 80 accidental tables. Vibe code the schema, then build on it.",
       },
     ],
   },
@@ -165,27 +163,27 @@ export const categories: Category[] = [
     title: "Front End vs Back End — Making It Dynamic",
     tagline: "Static files can't remember anything",
     blurb:
-      "A signup queue means the page has to save state and query it later. A static file you hand-edit every time can't do that — this is where an app stops being \"just a file.\"",
+      "A signup queue needs saved state. A static file you hand-edit can't do that — this is where an app stops being “just a file.”",
     terms: [
       {
         term: "Static file",
         definition:
-          "Fixed content that only changes when you go in and manually edit it. Fine for a brochure page, not fine for a growing list of leads.",
+          "Fixed content that only changes when you edit it by hand. Fine for a brochure, not for a growing list of leads.",
       },
       {
         term: "Client-side JavaScript",
         definition:
-          "Runs in the visitor's browser. Great for interactivity — a loader, a popup — but it has no memory of its own and can't touch your server's data on its own.",
+          "Runs in the visitor's browser. Great for UI; no lasting memory of its own, and can't touch your server's data alone.",
       },
       {
         term: "Back end",
         definition:
-          "Server-side logic that can actually save and query state — meaning it talks to a database instead of a static file.",
+          "Server-side logic that can save and query state — it talks to a database, not a static file.",
       },
       {
         term: "Dynamic application",
         definition:
-          "What you get once the front end and back end are wired together: visitors can add data (a mobile number) and you can view or query it later, instead of everything being frozen at deploy time.",
+          "Front end and back end wired together: visitors add data, you query it later — nothing frozen at deploy time.",
       },
     ],
   },
@@ -195,23 +193,22 @@ export const categories: Category[] = [
     title: "APIs & System Communication",
     tagline: "How separate systems actually talk",
     blurb:
-      "Building internal business tools really comes down to two skills: knowing how your data is saved (Layer 4), and knowing how different systems hand data to each other.",
+      "Internal tools come down to two skills: how data is saved (Layer 4), and how systems hand data to each other.",
     terms: [
       {
         term: "API",
         definition:
-          "A defined way for two systems to exchange data — one side sends a request, the other sends back a response.",
+          "A defined way for two systems to exchange data — request in, response out.",
       },
       {
         term: "Request / payload",
         definition:
-          "The actual data you send to an API, and the shape it's sent in — often JSON, sometimes form fields, sometimes a file attached to a URL.",
-        note: "\"How do I attach something to a URL\" and \"is this going as a text file or as fields\" are exactly the kind of nuance that trips people up — there's more than one right way, and the API you're talking to decides which one it wants.",
+          "The data you send, and the shape it's in — JSON, form fields, or a file on a URL. The API decides which it wants.",
       },
       {
         term: "Integration",
         definition:
-          "Wiring one system's output into another's input — a form into a spreadsheet, a webhook into a queue, your app into a payment processor.",
+          "Wiring one system's output into another's input — form → spreadsheet, webhook → queue, app → payments.",
       },
     ],
   },
@@ -221,28 +218,28 @@ export const categories: Category[] = [
     title: "Logistics & Systems Talking to Systems",
     tagline: "Most \"hard problems\" are just logistics",
     blurb:
-      "Take a transcription website. To do any work on an audio file, that file has to exist on the server's file system — which means it has to be uploaded there first. That single, mildly annoying requirement is the whole problem, wearing a disguise.",
+      "A transcription site can only work on audio that already exists on the server — upload first. That mildly annoying step is often the whole problem.",
     terms: [
       {
         term: "Logistics problem",
         definition:
-          "Most \"impossible\" technical problems are really just: this piece of data isn't where the next step needs it to be yet.",
-        note: "Once you name it as a logistics problem — get the file/data from A to B — it stops feeling mysterious and starts feeling like a series of solvable steps.",
+          "Most “impossible” bugs are really: this data isn't where the next step needs it yet.",
+        note: "Name it as get-data-from-A-to-B and it becomes a series of solvable steps.",
       },
       {
         term: "File system access",
         definition:
-          "A server can only work on a file — audio, an image, a document — once that file actually exists on disk somewhere it can reach.",
+          "A server can only process a file once that file exists somewhere it can reach.",
       },
       {
         term: "Upload",
         definition:
-          "The step that moves a file from a user's device onto your server (or a storage bucket) so your back end can finally operate on it.",
+          "Moves a file from the user's device onto your server (or a bucket) so the back end can use it.",
       },
       {
         term: "Getting systems to talk to systems",
         definition:
-          "A large share of real engineering work is just this: solved problem after solved problem of moving data between two things that don't natively understand each other.",
+          "A large share of real work is moving data between two things that don't natively understand each other.",
       },
     ],
   },
@@ -252,27 +249,26 @@ export const categories: Category[] = [
     title: "Control Flow & Programming Logic",
     tagline: "The actual Lego blocks",
     blurb:
-      "Underneath every feature is a small set of building blocks. Critical thinking, here, is just breaking a problem down and asking which block you're actually looking at.",
+      "Under every feature: a small set of blocks. Critical thinking here is naming which block you're looking at.",
     terms: [
       {
         term: "Function",
         definition:
-          "A named, reusable block that does something — and often hands back a result when it's done.",
+          "A named, reusable block that does something — and often returns a result.",
       },
       {
         term: "If / else statement",
-        definition:
-          "A branch: do this if a condition is true, otherwise do that.",
+        definition: "A branch: do this if true, otherwise do that.",
       },
       {
         term: "Loop (for / while)",
         definition:
-          "Repeats an action. A for loop typically runs a fixed number of times or over a list; a while loop keeps going until some condition stops being true.",
+          "Repeats an action — for a fixed count or list, or while a condition stays true.",
       },
       {
         term: "Breaking a problem into blocks",
         definition:
-          "The core skill: looking at a feature and asking — is this a function call? An if statement? A loop? Naming the block tells you what to actually write.",
+          "Look at a feature and ask: function? if? loop? Naming the block tells you what to write.",
       },
     ],
   },
@@ -282,34 +278,34 @@ export const categories: Category[] = [
     title: "Building For Yourself vs Building To Sell",
     tagline: "Beer and spirits — treat them as different drinks",
     blurb:
-      "There are two very different kinds of software, and they get built completely differently: software that solves your own business's problem, and software you sell to other businesses as a product.",
+      "Two different drinks: software that runs your own business, and software you sell to other businesses.",
     terms: [
       {
         term: "Internal application",
         definition:
-          "Software built to run your own business. The data model is easy because it's just your business — your customers, your customer emails, your jobs.",
+          "Built for your own business. The data model is easy — it's just your customers, emails, and jobs.",
       },
       {
         term: "Multi-tenant SaaS",
         definition:
-          "Software sold to other companies, where each company's data has to stay separate inside the same product.",
-        note: "Scaling, security, and logistics all get noticeably harder here — this is the \"spirits\" to an internal tool's \"beer.\"",
+          "Sold to other companies; each company's data stays separate inside the same product.",
+        note: "Scaling, security, and logistics get harder — spirits to an internal tool's beer.",
       },
       {
         term: "Platform admin",
         definition:
-          "The owner/operator of the whole product — sits above every tenant business using it.",
+          "Owner/operator of the whole product — sits above every tenant.",
       },
       {
         term: "Tenant (business) admin",
         definition:
-          "The admin of one specific business that has signed up to use your product.",
+          "Admin of one business that signed up to use your product.",
       },
       {
         term: "End users",
         definition:
-          "The individual people using the product day to day inside a tenant — there may be several different user types, each with different permissions.",
-        note: "All of these roles usually still authenticate through one shared users table, which is exactly what makes multi-tenant login logic genuinely tricky to get right.",
+          "People using the product day to day inside a tenant — often several roles with different permissions.",
+        note: "Roles usually share one users table — that's what makes multi-tenant login tricky.",
       },
     ],
   },
@@ -319,24 +315,24 @@ export const categories: Category[] = [
     title: "Schema-First Design & Migrations",
     tagline: "Design the Excel sheet before you design anything else",
     blurb:
-      "A user having \"one project\" and a user having \"many projects\" look almost identical on day one — and brutally different once real data is sitting in that table. Model the data early, because reshaping it later, at scale, is genuinely painful.",
+      "“One project” vs “many projects” looks identical on day one and brutal once real data is in the table. Model early.",
     terms: [
       {
         term: "Migration",
         definition:
-          "A change to a database's structure after it already has real data in it — for example, turning a one-to-one relationship into a one-to-many.",
-        note: "This is easy on an empty table and hard on a live one. The fix is deciding the shape correctly before data piles up, not after.",
+          "A change to database structure after real data is already in it — e.g. one-to-one → one-to-many.",
+        note: "Easy on an empty table, hard on a live one. Decide the shape before data piles up.",
       },
       {
         term: "\"What does the Excel sheet look like?\"",
         definition:
-          "A practical design trick: picture the actual website you're building and ask what data is visible on the page. Each distinct thing you see becomes a table.",
+          "Picture the page you're building: what data is visible? Each distinct thing becomes a table.",
       },
       {
         term: "Semantic grouping",
         definition:
-          "Naming and grouping tables by what the data represents in the real world — not just by what's convenient to type today.",
-        note: "Real-estate-site example: a listing you see is a property. Its rental history is one table, its sale history is another — because that's genuinely how the real-world data is shaped, not because it's arbitrary.",
+          "Name and group tables by what the data is in the real world — not what's convenient to type today.",
+        note: "A listing is a property; rental history and sale history are separate tables because that's how the world is shaped.",
       },
     ],
   },

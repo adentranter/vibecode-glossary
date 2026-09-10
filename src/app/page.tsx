@@ -85,6 +85,16 @@ export default function Home() {
           together instead of reinventing them each time. This is a quick pass
           through those blocks, told through one running example.
         </p>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          You don&apos;t need this to vibe code. You need it to{" "}
+          <Link
+            href="/glossary#why"
+            className="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+          >
+            fault-find
+          </Link>
+          .
+        </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button asChild size="lg">
