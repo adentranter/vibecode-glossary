@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
+import Script from "next/script";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -29,12 +30,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const enableUmami = process.env.NODE_ENV === "production";
+
   return (
     <html
       lang="en"
       className={`${dmSans.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
+      {enableUmami && (
+        <Script
+          defer
+          src="https://analytics.adentranter.com/script.js"
+          data-website-id="8062cd67-6884-4b88-8efe-11a1cec2c7a5"
+          strategy="afterInteractive"
+        />
+      )}
       <body className="flex min-h-screen flex-col antialiased">
         <SiteHeader />
         <main className="flex-1">{children}</main>
